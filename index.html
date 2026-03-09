@@ -1,1 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WoodPecker Creations Association</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 
+    <style>
+        :root {
+            --primary: #5d4037; 
+            --accent: #d4a373;  
+            --text: #1e293b;
+            --bg-light: #fdfaf7;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+            scroll-behavior: smooth;
+        }
+
+        /* --- Header & Hero --- */
+        header {
+            background: linear-gradient(135deg, #2d1b14 0%, #5d4037 100%);
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); 
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* --- Sections --- */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            margin: 10px auto 0;
+        }
+
+        /* --- Cards --- */
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .order-button {
+            display: inline-block;
+            background: #92400e;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-top: 20px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .order-button:hover {
+            background: #5d4037;
+            transform: scale(1.05);
+            color: white;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #1a0f0a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        footer strong { color: white; }
+
+        @media (max-width: 600px) {
+            header { padding: 80px 20px; }
+            nav a { margin: 0 10px; font-size: 0.8rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>WoodPecker Creations Association</h1>
+    <p>Mastering wood and paper, one craft at a time.</p>
+</header>
+
+<nav>
+    <a href="#about">Our Story</a>
+    <a href="#products">Creations</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <div class="card">
+        <h2>About Us</h2>
+        <p>Founded in 2026, we are a community of artisans dedicated to precision crafting. Whether we're carving custom timber pieces or folding intricate paper designs, we transform simple materials into unique works of art.</p>
+    </div>
+</section>
+
+<section id="products">
+    <div class="card">
+        <h2>Our Creations</h2>
+        <p>We specialize in <strong>finding forever homes for our pets</strong> we also specialize in providing care for our pets <strong>paper origami</strong> and <strong>paper aviation</strong> designs. From the wood shop to the drafting table, we bring your ideas to life.</p>
+        
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_nuzDaKsnkSF7wmCQAjimKACyxVkYB6djmNYFFf7L3s7w5Q/viewform?usp=publish-editor" target="_blank" class="order-button">
+            Adopt a pet
+        </a>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="card">
+        <h2>Get in Touch</h2>
+        <p>Interested in adopting one of our pets? Reach out to our founders</p>
+        <p>
+            <strong>Cutler</strong><br>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 <strong>Furever Association</strong>. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
